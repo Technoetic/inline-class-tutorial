@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"maxNodeModuleJsDepth": 0,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"target": "ES2022"
+	},
+	"include": ["src/**/*.js"],
+	"exclude": ["dist", "node_modules", "step_archive"],
+	"typeAcquisition": {
+		"enable": false
+	}
+}

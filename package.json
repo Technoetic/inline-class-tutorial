@@ -1,0 +1,36 @@
+{
+  "name": "core-rescue-inline-class",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve:dist": "node scripts/serve-dist.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "biome check src tests scripts vite.config.js vitest.config.js playwright.config.js stylelint.config.mjs",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "format": "biome format --write src tests scripts *.js *.json",
+    "harness:check": "node scripts/harness-check.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@biomejs/biome": "2.5.4",
+    "@lhci/cli": "^0.15.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "jscpd": "^5.0.12",
+    "knip": "^6.27.0",
+    "madge": "^8.0.0",
+    "playwright": "^1.61.1",
+    "source-map-explorer": "^2.5.3",
+    "stylelint": "^17.14.0",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "^5.9.3",
+    "vite": "8.1.5",
+    "vitest": "^4.1.10"
+  }
+}

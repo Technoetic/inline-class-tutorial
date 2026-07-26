@@ -1,0 +1,159 @@
+#app {
+	min-height: 100vh;
+}
+
+.game-shell {
+	width: min(100%, var(--content-max));
+	min-height: 100vh;
+	margin: var(--space-0) auto;
+	background: var(--color-space);
+	box-shadow: var(--shadow-card);
+}
+
+.topbar {
+	min-height: var(--topbar-height);
+	display: grid;
+	grid-template-columns: var(--topbar-columns);
+	gap: var(--space-3);
+	align-items: center;
+	padding: var(--space-3) var(--layout-padding);
+	border-bottom: var(--border-thin) solid var(--color-line);
+}
+
+.brand {
+	grid-column: var(--brand-grid-column);
+	grid-row: var(--brand-grid-row);
+	display: flex;
+	gap: var(--space-2);
+	align-items: center;
+}
+
+.mission-progress {
+	grid-column: var(--progress-grid-column);
+	grid-row: var(--progress-grid-row);
+	display: grid;
+	justify-items: center;
+	gap: var(--space-1);
+}
+
+.score-readout {
+	grid-column: var(--score-grid-column);
+	grid-row: var(--score-grid-row);
+	display: grid;
+	text-align: right;
+}
+
+.mission {
+	display: grid;
+	gap: var(--mission-gap);
+	padding: var(--space-5) var(--layout-padding) var(--space-7);
+}
+
+.mission-heading {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: var(--space-3);
+	align-items: start;
+}
+
+.mission-heading > p {
+	grid-column: 1 / -1;
+	max-width: var(--copy-max);
+}
+
+.workspace {
+	display: grid;
+	grid-template-columns: var(--workspace-columns);
+	gap: var(--workspace-gap);
+	align-items: stretch;
+}
+
+.vessel {
+	min-height: var(--vessel-min-height);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-4);
+}
+
+.transfer-lane {
+	order: var(--lane-order);
+	display: var(--lane-display);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ability-list,
+.slot-grid,
+.connection-list,
+.clue-grid,
+.action-row {
+	display: grid;
+	gap: var(--space-2);
+}
+
+.connection-panel,
+.control-deck {
+	display: grid;
+	gap: var(--space-3);
+}
+
+.connection-list,
+.clue-grid {
+	grid-template-columns: var(--list-columns);
+}
+
+.gauge-panel ul {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.action-row {
+	grid-template-columns: repeat(auto-fit, minmax(var(--card-min), 1fr));
+}
+
+.app-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: var(--space-2);
+	padding: var(--space-3) var(--layout-padding);
+	border-top: var(--border-thin) solid var(--color-line);
+}
+
+.launch-screen,
+.result-screen,
+.final-screen,
+.complete-screen,
+.fatal-screen {
+	width: min(100%, var(--content-max));
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: var(--space-4);
+	margin: var(--space-0) auto;
+	padding: var(--space-6) var(--layout-padding);
+}
+
+.result-screen,
+.complete-screen {
+	align-items: center;
+	text-align: center;
+}
+
+.final-grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: var(--final-columns);
+	gap: var(--space-3);
+}
+
+.workspace .vessel:first-child {
+	order: var(--core-order);
+}
+
+.workspace .vessel:last-child {
+	order: var(--donor-order);
+}

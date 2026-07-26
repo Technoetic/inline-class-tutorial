@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.log
+*.tsbuildinfo
+.claude/
+.mcp.json
+step_archive/
+AGENTS.md
+CLAUDE.md
+CODEX_PROMPT.md

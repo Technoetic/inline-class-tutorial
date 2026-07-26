@@ -1,0 +1,54 @@
+@keyframes scene-enter {
+	from {
+		opacity: var(--opacity-hidden);
+		transform: var(--transform-enter) scale(var(--scale-start));
+	}
+
+	to {
+		opacity: var(--opacity-visible);
+		transform: translateY(var(--space-0)) scale(var(--scale-end));
+	}
+}
+
+@keyframes pulse-highlight {
+	50% {
+		border-color: var(--color-accent-strong);
+		box-shadow: var(--shadow-focus);
+	}
+}
+
+@keyframes transfer-flash {
+	50% {
+		color: var(--color-accent-strong);
+		transform: scale(var(--scale-start));
+	}
+}
+
+.launch-screen,
+.mission,
+.result-screen,
+.final-screen,
+.complete-screen {
+	animation: scene-enter var(--transition-scene) both;
+}
+
+[data-effect="highlight"] [data-effect-target],
+[data-effect="redirect"] .connection-panel {
+	animation: pulse-highlight var(--transition-scene);
+}
+
+[data-effect="transfer"] .workspace,
+[data-effect="verify"] .gauge-panel {
+	animation: transfer-flash var(--transition-scene);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto;
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+		transition-duration: 0.01ms;
+	}
+}

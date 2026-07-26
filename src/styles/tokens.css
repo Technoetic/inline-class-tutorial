@@ -1,0 +1,139 @@
+:root {
+	color-scheme: dark;
+
+	--color-void: #070b0d;
+	--color-space: #0c1215;
+	--color-surface: #111a1e;
+	--color-surface-raised: #172329;
+	--color-line: #294047;
+	--color-line-strong: #42616a;
+	--color-text: #f0f7f5;
+	--color-text-muted: #9cb0b3;
+	--color-accent: #39e6c2;
+	--color-accent-strong: #8affdf;
+	--color-accent-ink: #05261f;
+	--color-warning: #ffb65c;
+	--color-warning-ink: #2e1800;
+	--color-success: #83ef9d;
+	--color-shadow: #00000080;
+	--color-backdrop: #000000b3;
+	--color-star: #8da1a826;
+	--color-focus: #fff2a8;
+	--font-display: "Trebuchet MS", "Segoe UI", sans-serif;
+	--font-body: "Segoe UI", system-ui, sans-serif;
+	--font-mono: "Cascadia Mono", "Segoe UI Mono", monospace;
+	--font-weight-regular: 400;
+	--font-weight-medium: 600;
+	--font-weight-bold: 800;
+	--font-size-xs: 0.75rem;
+	--font-size-sm: 0.875rem;
+	--font-size-md: 1rem;
+	--font-size-lg: 1.25rem;
+	--font-size-xl: 1.75rem;
+	--font-size-mission: 2rem;
+	--font-size-hero: clamp(2.75rem, 9vw, 6.5rem);
+	--line-height-tight: 1.08;
+	--line-height-body: 1.6;
+	--letter-spacing-tight: -0.04em;
+	--letter-spacing-wide: 0.13em;
+	--space-0: 0;
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 1rem;
+	--space-4: 1.5rem;
+	--space-5: 2rem;
+	--space-6: 3rem;
+	--space-7: 4rem;
+	--radius-0: 0;
+	--radius-sm: 0.25rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 1rem;
+	--border-thin: 0.0625rem;
+	--border-thick: 0.125rem;
+	--control-min: 2.75rem;
+	--content-max: 80rem;
+	--copy-max: 42rem;
+	--card-min: 12rem;
+	--topbar-height: 5rem;
+	--vessel-min-height: 20rem;
+	--signal-size: 11rem;
+	--step-size: 4.5rem;
+	--emblem-size: 8rem;
+	--progress-height: 0.35rem;
+	--progress-width: 10rem;
+	--drawer-width: 100%;
+	--viewport-block: 100dvh;
+	--dot-size: 0.0625rem;
+	--dot-gap: 2rem;
+	--layout-padding: var(--space-3);
+	--layout-columns: minmax(0, 1fr);
+	--topbar-columns: minmax(0, 1fr) auto;
+	--brand-grid-column: 1;
+	--brand-grid-row: 1;
+	--progress-grid-column: 1 / -1;
+	--progress-grid-row: 2;
+	--score-grid-column: 2;
+	--score-grid-row: 1;
+	--list-columns: minmax(0, 1fr);
+	--final-columns: minmax(0, 1fr);
+	--mission-gap: var(--space-5);
+	--core-order: initial;
+	--lane-order: initial;
+	--donor-order: initial;
+	--workspace-columns: minmax(0, 1fr);
+	--workspace-gap: var(--space-3);
+	--lane-display: none;
+	--shadow-card: 0 1.5rem 4rem var(--color-shadow);
+	--shadow-focus:
+		0 0 0 0.2rem var(--color-void), 0 0 0 0.35rem var(--color-focus);
+	--transition-fast: 140ms ease;
+	--transition-scene: 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+	--transform-lift: translateY(-0.125rem);
+	--transform-enter: translateY(1rem);
+	--opacity-hidden: 0;
+	--opacity-muted: 0.7;
+	--opacity-visible: 1;
+	--scale-start: 0.97;
+	--scale-end: 1;
+	--star-field: radial-gradient(
+		circle,
+		var(--color-star) var(--dot-size),
+		transparent var(--dot-size)
+	);
+	--z-skip: 10;
+	--z-backdrop: 20;
+	--z-drawer: 21;
+}
+
+@media (width >= 40rem) {
+	:root {
+		--layout-padding: var(--space-5);
+		--font-size-mission: 2.25rem;
+		--topbar-columns: auto minmax(0, 1fr) auto;
+		--brand-grid-column: auto;
+		--brand-grid-row: auto;
+		--progress-grid-column: auto;
+		--progress-grid-row: auto;
+		--score-grid-column: auto;
+		--score-grid-row: auto;
+		--list-columns: repeat(2, minmax(0, 1fr));
+		--final-columns: repeat(3, minmax(0, 1fr));
+		--workspace-columns: minmax(0, 1fr) minmax(0, 1fr);
+		--workspace-gap: var(--space-5);
+		--drawer-width: 24rem;
+	}
+}
+
+@media (width >= 64rem) {
+	:root {
+		--layout-padding: var(--space-6);
+		--font-size-mission: 2.5rem;
+		--mission-gap: var(--space-6);
+		--core-order: 1;
+		--lane-order: 2;
+		--donor-order: 3;
+		--workspace-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+		--workspace-gap: var(--space-4);
+		--lane-display: flex;
+	}
+}

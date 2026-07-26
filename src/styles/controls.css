@@ -1,0 +1,114 @@
+.button {
+	min-height: var(--control-min);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: var(--space-2) var(--space-4);
+	border: var(--border-thin) solid var(--color-line-strong);
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	transition:
+		transform var(--transition-fast),
+		border-color var(--transition-fast),
+		background-color var(--transition-fast);
+}
+
+.button--primary {
+	color: var(--color-accent-ink);
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	font-weight: var(--font-weight-bold);
+}
+
+.button--secondary,
+.button--quiet {
+	color: var(--color-text);
+	background: var(--color-surface-raised);
+}
+
+.button--quiet {
+	border-style: dashed;
+}
+
+.button--large {
+	padding: var(--space-3) var(--space-5);
+	font-size: var(--font-size-lg);
+}
+
+.button:hover,
+.ability-chip--action:hover,
+.slot--action:hover,
+.connection--action:hover {
+	transform: var(--transform-lift);
+}
+
+.why-trigger {
+	justify-self: start;
+}
+
+.why-backdrop {
+	position: fixed;
+	z-index: var(--z-backdrop);
+	inset: var(--space-0);
+	width: 100%;
+	height: var(--viewport-block);
+	padding: var(--space-0);
+	background: var(--color-backdrop);
+	border: var(--space-0);
+	cursor: pointer;
+}
+
+.why-drawer {
+	position: fixed;
+	z-index: var(--z-drawer);
+	top: var(--space-0);
+	right: var(--space-0);
+	width: var(--drawer-width);
+	height: var(--viewport-block);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-5);
+	padding: var(--space-5);
+	overflow-y: auto;
+	background: var(--color-surface);
+	border-left: var(--border-thick) solid var(--color-accent);
+	box-shadow: var(--shadow-card);
+}
+
+.why-drawer[hidden],
+.why-backdrop[hidden] {
+	display: none;
+}
+
+.why-drawer header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: var(--space-3);
+}
+
+.why-drawer__clue {
+	color: var(--color-accent);
+	font-size: var(--font-size-xl);
+}
+
+.why-drawer > p {
+	color: var(--color-text-muted);
+	font-size: var(--font-size-lg);
+}
+
+.feedback {
+	padding: var(--space-3);
+	border: var(--border-thin) solid var(--color-accent);
+	border-radius: var(--radius-md);
+}
+
+.feedback--warning {
+	color: var(--color-warning);
+	border-color: var(--color-warning);
+}
+
+.feedback--success {
+	color: var(--color-success);
+	border-color: var(--color-success);
+}
