@@ -22,6 +22,7 @@ function finalNewlinePlugin() {
 }
 
 export default defineConfig({
+	base: process.env.VITE_BASE_PATH || "/",
 	plugins: [finalNewlinePlugin()],
 	build: {
 		target: "es2022",
